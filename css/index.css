@@ -1,0 +1,150 @@
+body {
+  background-color: rgb(30, 29, 29);
+  color: white;
+  font-family: Roboto, Helvetica, sans-serif;
+}
+
+h2 {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+/* grid setup */
+.pbu-grid {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 80px 900px auto auto;
+  grid-template-areas:
+    "navbar"
+    "hero"
+    "body"
+    "footer";
+}
+
+.pbu-nav-grid {
+  grid-area: navbar;
+  background-color: transparent;
+}
+
+.pbu-hero-grid {
+  grid-area: hero;
+  
+}
+
+.pbu-body-grid {
+  grid-area: body;
+}
+
+.pbu-footer-div{
+  grid-area: footer ;
+}
+/* Nav */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: red;
+  height: 100%;
+}
+
+nav ul {
+  display: inline-block;
+}
+
+nav ul>li {
+  display: inline-block;
+}
+
+nav img{
+  display: inline-block;
+}
+
+.pbu-nav-links{
+  display: flex;
+  align-items: center;
+}
+
+#pbu-logo {
+  width: 100px;
+}
+
+.pbu-nav-login li{
+ display: inline-block;
+}
+/* main section */
+.pbu-main-section {
+  width: 100%;
+  height: 100%;
+  background-image: url("../assets/images/the-meg-cover.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.pbu-container {
+  max-width: 80%;
+  height: 100%;
+  background-color: black;
+  padding-top: 40px;
+}
+
+.pbu-movie-card>img {
+  width: 100%;
+  height: 70%;
+}
+
+.pbu-movie-description {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.pbu-movie-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pbu-movie-title h3 {
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.pbu-movie-title p {
+  display: inline-block;
+  color: grey;
+}
+
+.pbu-movie-title p:active {
+  color: red;
+}
+
+.pbu-movie-title p:hover {
+  color: red;
+  transition: 0.15s;
+  cursor: pointer;
+}
+
+.pbu-movie-info {
+  display: flex;
+  color: darkgray;
+  gap: 15px;
+}
+
+.pbu-movie-info p {
+  display: inline-block;
+}
+
+.pbu-movie-info p {
+  font-size: 12px;
+}
+
+.py-6 {
+  padding-top: 120px;
+  padding-bottom: 200px;
+}
+
+.pbu-coming-soon {
+  border-top: 0.5px solid rgb(24, 24, 24);
+}
