@@ -1,7 +1,7 @@
 body {
   background-color: rgb(30, 29, 29);
   color: white;
-  font-family: Roboto, Helvetica, sans-serif;
+  font-family: "Roboto", Helvetica, sans-serif;
 }
 
 h2 {
@@ -13,71 +13,141 @@ h2 {
 .pbu-grid {
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 80px 900px auto auto;
+  grid-template-rows: 900px auto auto;
   grid-template-areas:
-    "navbar"
     "hero"
     "body"
     "footer";
 }
 
-.pbu-nav-grid {
-  grid-area: navbar;
-  background-color: transparent;
-}
-
-.pbu-hero-grid {
-  grid-area: hero;
-  
+.pbu-nav-grid div {
+  z-index: 3;
+  display: flex;
+  gap: 30px;
 }
 
 .pbu-body-grid {
   grid-area: body;
 }
 
-.pbu-footer-div{
-  grid-area: footer ;
+.pbu-footer-div {
+  grid-area: footer;
 }
+
 /* Nav */
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: red;
+  background-color: rgba(255, 0, 0, 0);
   height: 100%;
+  padding: 0 50px 0 20px;
 }
 
 nav ul {
   display: inline-block;
 }
 
-nav ul>li {
+nav ul > li {
   display: inline-block;
 }
 
-nav img{
-  display: inline-block;
-}
-
-.pbu-nav-links{
+.pbu-nav-links {
   display: flex;
   align-items: center;
 }
 
-#pbu-logo {
-  width: 100px;
+.pbu-nav-links ul {
+  display: flex;
+  align-items: center;
+  gap: 30px;
 }
 
-.pbu-nav-login li{
- display: inline-block;
+.pbu-logo img {
+  max-width: 100px;
 }
+
+.pbu-nav-login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pbu-nav-login ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.pbu-nav-login button {
+  padding: 10px 30px 10px 30px;
+  color: white;
+  border-radius: 10%;
+  background-color: rgb(243, 3, 58);
+  border: 0;
+  font-weight: 900;
+  font-size: 15px;
+}
+
+/* Hero */
+.pbu-hero-grid {
+  grid-area: hero;
+  background-image: url("../assets/images/the-meg-cover.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.pbu-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+.movie-intro {
+  width: 30%;
+  z-index: 5;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 15px 30px auto 40px;
+  grid-template-areas:
+    "with with"
+    "actors info"
+    "heading heading"
+    "book date";
+}
+
+.movie-intro h1 {
+  grid-area: heading;
+  font-size: 80px;
+}
+
+.movie-intro p:first-of-type {
+  grid-area: with;
+}
+
+.movie-intro .actors {
+  grid-area: actors;
+}
+
+.movie-intro:nth-child(5) {
+  grid-area: book;
+}
+
+.movie-intro:last-child {
+  grid-area: date;
+}
+
 /* main section */
 .pbu-main-section {
   width: 100%;
   height: 100%;
-  background-image: url("../assets/images/the-meg-cover.jpg");
-  background-size: 100%;
-  background-repeat: no-repeat;
 }
 
 .pbu-container {
@@ -87,7 +157,7 @@ nav img{
   padding-top: 40px;
 }
 
-.pbu-movie-card>img {
+.pbu-movie-card > img {
   width: 100%;
   height: 70%;
 }
